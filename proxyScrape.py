@@ -18,12 +18,7 @@ class ProxyScrape:
 
             request_proxies = self.get_req()
 
-            if(type == 'http'):
-                proxies = self.get_proxies(request_proxies, request_proxies[type], type)
-            elif(type == 'socks4'):
-                proxies = self.get_proxies(request_proxies, request_proxies[type], type)
-            elif(type == 'socks5'):
-                proxies = self.get_proxies(request_proxies, request_proxies[type], type)
+            proxies = self.get_proxies(request_proxies, request_proxies[type], type)
 
             return proxies
 
